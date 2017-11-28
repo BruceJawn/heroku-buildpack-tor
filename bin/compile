@@ -118,7 +118,7 @@ echo "HiddenServicePort 80 127.0.0.1:\${PORT}" >> $HOME/tor/etc/tor/torrc
 
 # For ZeroNet
 echo "controlPort 9051" >> $HOME/tor/etc/tor/torrc
-echo "cCookieAuthentication 1" >> $HOME/tor/etc/tor/torrc
+echo "CookieAuthentication 1" >> $HOME/tor/etc/tor/torrc
 #
 
 # Use -f to be safe here.

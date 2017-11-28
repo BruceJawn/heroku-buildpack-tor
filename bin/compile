@@ -99,7 +99,7 @@ cat > ${BUILD_DIR}/tor/bin/${RUN_COMMAND} <<EOF
 echo "Setting up ZeroNet"
 cat > ${HOME}/zeronet.conf << EOZ
 [global]
-ui_ip = 127.0.0.1
+ui_ip = *
 ui_port = \${PORT}
 multiuser_no_new_sites
 homepage = \${mysiteaddress}

@@ -96,6 +96,15 @@ echo "${TOR_SRC_NAME}" > $CACHE_DIR/tor_version.txt
 cat > ${BUILD_DIR}/tor/bin/${RUN_COMMAND} <<EOF
 #!/usr/bin/env bash
 
+echo "Setting up ZeroNet"
+cat > ${HOME}/zeronet.conf << EOZ
+[global]
+ui_ip = *
+ui_port = \${PORT}
+multiuser_no_new_sites
+homepage = \${mysiteaddress}
+EOZ
+
 mkdir -p "${HOME}/hidden_service"
 
 echo "Setting up hidden service"
@@ -116,5 +125,5 @@ chmod a+x ${BUILD_DIR}/tor/bin/${RUN_COMMAND}
 
 echo "Installed Tor successfully" | indent
 
-
+cd 
 

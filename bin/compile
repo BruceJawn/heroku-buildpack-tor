@@ -103,7 +103,8 @@ ui_ip = *
 ui_port = \${PORT}
 multiuser_no_new_sites
 homepage = \${mysiteaddress}
-ui_host = dcntrli7i2ytw57h.onion dcentral.herokuapp.com
+ui_host = dcntrli7i2ytw57h.onion
+dcentral.herokuapp.com
 EOZ
 
 mkdir -p "${HOME}/hidden_service"

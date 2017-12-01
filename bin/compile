@@ -106,8 +106,11 @@ homepage = \${mysiteaddress}
 ui_host = 
  \${HIDDEN_DOT_ONION}
  \${CLEARNET_URL}
+tor = \${USE_TOR}
 EOZ
 
+if [[ "\${USE_TOR}" != "disable" ]]
+then
 mkdir -p "${HOME}/hidden_service"
 
 echo "Setting up hidden service"
@@ -127,11 +130,12 @@ echo "CookieAuthentication 1" >> $HOME/tor/etc/tor/torrc
 # Use -f to be safe here.
 $HOME/tor/bin/tor -f $HOME/tor/etc/tor/torrc &
 exec \$*
+fi
+
 EOF
 
 chmod a+x ${BUILD_DIR}/tor/bin/${RUN_COMMAND}
 
 echo "Installed Tor successfully" | indent
 
-cd 
 

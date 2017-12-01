@@ -130,6 +130,8 @@ echo "CookieAuthentication 1" >> $HOME/tor/etc/tor/torrc
 # Use -f to be safe here.
 $HOME/tor/bin/tor -f $HOME/tor/etc/tor/torrc &
 exec \$*
+else
+exec \$*
 fi
 
 EOF

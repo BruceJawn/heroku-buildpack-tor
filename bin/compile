@@ -101,12 +101,12 @@ cat > ${HOME}/zeronet.conf << EOZ
 [global]
 ui_ip = *
 ui_port = \${PORT}
-multiuser_no_new_sites
 homepage = \${mysiteaddress}
 ui_host = 
  \${HIDDEN_DOT_ONION}
  \${CLEARNET_URL}
 tor = \${USE_TOR}
+\${ZERONET_CONFIG}
 EOZ
 
 if [[ "\${USE_TOR}" != "disable" ]]

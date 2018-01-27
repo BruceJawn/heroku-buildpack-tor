@@ -1,3 +1,10 @@
+# Using Tor with ZeroNet on Heroku
+
+This buildpack for Heroku can
+1. create a hidden service for your ZeroNet proxy on Heroku
+2. enable Tor support for ZeroNet connections on Heroku
+See the tutorial http://bruce-lab.blogspot.com/2018/01/using-tor-with-zeronet-on-heroku.html for more information.
+
 # Tor Hidden Service Buildpack for Heroku
 
 This buildpack sets up a Tor hidden service for your app on Heroku.
